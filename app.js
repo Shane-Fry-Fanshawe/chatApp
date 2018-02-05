@@ -21,12 +21,25 @@ const server = app.listen(3000, () => {
 //Socket - Get it up and running
 io.attach(server);
 
-io.on('connection', (socket)=> {
+io.on('connection', socket => {
   console.log('a user has connected!');
-  //io.emit('connectMsg', {for: 'everyone', msg: `${socket.id} is here!`});
+
+
+  io.emit('chat message', { for: 'everyone', message: `${socket.id} is here!`});
+
+//Handle message from sent for the client
+socket.on('chat message', msg => {
+
+io.emit('chat message', { for: 'everyone', message: msg}); //here we pass in the message not the user name
+
+})
+
 
   socket.on('disconnect', () => {
     console.log('A user has been disconnectted');
+
+  io.emit('disconnect message', `${socket.id} has left the building`);
+
   });
 
 
