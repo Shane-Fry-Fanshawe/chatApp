@@ -1,4 +1,4 @@
-##CHAT APP
+## CHAT APP
 - By Shane Fry
 - This is a Socket.io based chat app for server side applications
 
