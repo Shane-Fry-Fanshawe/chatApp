@@ -5,12 +5,32 @@
       chatForm =  document.querySelector('form'),
       nameInput =  document.querySelector('.nickname'),
       chatMessage =  document.querySelector('.message'),
+      nickNameSection = document.querySelector('#nickNameSection'),
+      nickNameSectionWelcome = document.querySelector('#nickNameSectionWelcome'),
+      welcomeMessageName = document.querySelector('#welcomeMessage'),
+
+
       nickName = null;
 
 
       function setNickname(){
         //debugger;
         nickName = this.value;
+
+        //console.log(nameInput.value);
+        nickNameSection.style.display = "none";
+        nickNameSectionWelcome.style.display = "block";
+
+//No need to hide Welcome message if wanted to, unless I added a change name option.
+        welcomeMessageName.innerHTML = "Welcome " + nickName + ", start chatting!";
+
+
+//I only want to set a color to Nickname users, as all non users wouldnt want to be known
+        console.log(socket.id);
+
+
+
+
       }
 
       function handleSendMessage(e){ //E is the event object that gets generated, which is the submit button in this case
@@ -44,6 +64,8 @@
 
 
       }
+
+
 
 
 
