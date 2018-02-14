@@ -1,23 +1,51 @@
-#CHAT APP
+##CHAT APP
 - By Shane Fry
+- This is a Socket.io based chat app for server side applications
 
-## Info
-- In this project I am creating a web app that is using an instant messaging system with node.js and express. This will be a chat system to load instantly without refresh, and will provide a good template chat system for future builds!
+## Getting Started
+-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 
 
 ## Prerequisites
-- Atom
-- MAMP
-- Dreamweaver
-- Cinema 4D
+```
+socket.io
+```
+
+```
+gruntjs
+```
+
+```
+express
+```
+
 
 ## Installing
+
+- Please follow the commands and downloads listen to get the application running!
+
 - Atom: https://atom.io/
 - MAMP: https://www.mamp.info/en/
-- Dreamweaver (With Creative Cloud): http://www.adobe-students.com/creativecloud/buy/students.html?sdid=KKTHT&mv=search&s_kwcid=AL!3085!3!221150330581!e!!!!dreamweaver&ef_id=VTmOoQAAAdvZhzMW:20170928001954:s
-- Dreamweaver separate: https://www.adobe.com/ca/products/dreamweaver.html
-- Cinema 4D: https://www.maxon.net/en/try/demo-download/
+
+-Socket.io
+```
+npm install socket.io --save
+```
+
+-Grunt
+```
+npm install -g grunt-cli
+npm install grunt --save-dev
+npm install grunt-contrib-uglify --save-dev
+npm install grunt-contrib-watch --save-dev
+```
+
+-Express
+```
+npm install express
+```
+
 
 ## Running the tests
 - W3C Markup Validation
@@ -30,7 +58,11 @@
     - Preview chrome / console
 
 ## Deployment
-- Hosting, Domain, and Email is through Hostgator
+- Can use either Mamp, or local host through using a port and express to direct to new view page
+- In my case run, and localhost:3000 will be running
+```
+node app
+```
 
 
 ## Built with
