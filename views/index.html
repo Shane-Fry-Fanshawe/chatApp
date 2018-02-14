@@ -2,16 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Socket IO Chat with Node!</title>
+	<title>Shane Fry - Chat App</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<input type="text" class="nickname" placeholder="What is your nickname?">
+
+	<div id="container">
+
+<div id="nickNameSection">
+	<input type="text" class="nickname" placeholder="ENTER YOUR NICKNAME">
+	<span class="underline"></span>
+</div>
+
+<div id="nickNameSectionWelcome">
+	<h2 id="welcomeMessage"> <h2>
+</div>
+
 	<ul id="messages"></ul>
+
+
+	<div class="bottom_form">
 	<form>
-		<input class="message" type="text" id="m" autocomplete="off">
-		<button>send</button>
-	</form>
+		<input class="message" type="text" id="m" autocomplete="off" placeholder="Enter your message">
+		<button class="send">SEND</button>
+	</div>
+</form>
+
+
+</div>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
